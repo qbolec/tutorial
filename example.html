@@ -9,6 +9,9 @@
         width:300px;
         background:orange;
       }
+      #two {
+        cursor:pointer;
+      }
     </style>
   </head>
   <body>
@@ -23,13 +26,14 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
   <script src="tutorial.js"></script>
   <script>
-    new Tutorial.TutorialPlayerControl({
+    var tpc=new Tutorial.TutorialPlayerControl({
       steps:[
         {element:'#one',css_class:'side-S',html:"whoa"},
-        {element:$('#two'),css_class:'side-N no_prev',html:"l<b>o</b>l"},
+        {element:$('#two'),css_class:'side-N no_prev no_next no_exit',html:"l<b>o</b>l"},
         {element:'li:last',html:_.escape("The <E>ND!"), exitLabel: 'FINITO' }
       ],
       exitLabel: 'Finish'
     });
+    $('#two').click(function(){tpc.set('step',2)});
   </script>
 </html>
