@@ -20,7 +20,7 @@ I think it is also quite easy to style yourself.
 You don't need Bootstrap for it to work, but if you do use Bootstrap, then buttons gain some default styles, though.
 
 You can also change the step of the tutorial programatically.
-Check for example.html what I do for `#two` - 
+Check for [example.html](http://vanisoft.pl/~lopuszanski/public/tutorial/example.html) what I do for `#two` - 
 by using `no_next no_prev no_exit` in `css_class` I hide the buttons,
 by assigning `"glow_when_tutorial_highlight"` to the element class I make it glow when it is active,
 and by using `set('step',2)` in the onclick handler I force the tutorial to progress when the element is clicked.
