@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="tutorial.css"></link>
+    <style>
+      ol {
+        margin:100px;
+        width:300px;
+        background:orange;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li id="one">hello
+      <li id="two" class="glow_when_tutorial_highlight">world
+      <li>lol
+    </ol>
+  </body>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+  <script src="tutorial.js"></script>
+  <script>
+    new Tutorial.TutorialPlayerControl({
+      steps:[
+        {element:'#one',css_class:'side-S',html:"whoa"},
+        {element:$('#two'),css_class:'side-N no_prev',html:"l<b>o</b>l"},
+        {element:'li:last',html:_.escape("The <E>ND!"), exitLabel: 'FINITO' }
+      ],
+      exitLabel: 'Finish'
+    });
+  </script>
+</html>
